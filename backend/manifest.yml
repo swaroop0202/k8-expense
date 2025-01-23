@@ -33,8 +33,8 @@ spec:
       - name: backend
         image: swaroop02/backend:j1.0  
         envFrom:
-            configMapRef:
-              - name: configmap
+          - configMapRef:
+              name: configmap
 
 ---
 apiVersion: v1
