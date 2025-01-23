@@ -40,7 +40,8 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service-1
+  name: backend
+  namespace: expense
 spec:
   selector:
     project: expense
