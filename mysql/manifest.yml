@@ -1,0 +1,25 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: mysql
+  labels:
+    project: expense
+    environment: dev
+    tier: db
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      project: expense
+      environment: dev
+      tier: db
+  template:
+    metadata:
+      labels:
+        project: expense
+        environment: dev
+        tier: db
+    spec:
+      containers:
+      - name: mysql
+        image: swaroop02/mysql:1.0    
